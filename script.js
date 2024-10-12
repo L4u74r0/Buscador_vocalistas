@@ -6,6 +6,8 @@ let todosLosArtistas = [];
 const ARTISTAS_POR_PAGINA = 9;
 let paginaActual = 1;
 
+let artistasFiltrados = [];
+
 async function obtenerArtistas() {
     try {
         mostrarMensajeCarga(true);
@@ -25,17 +27,13 @@ async function obtenerArtistas() {
     }
 }
 
-function mostrarArtistas(artistas, pagina = 1) {
-    console.log('Mostrando artistas...', artistas.length); 
-    paginaActual = pagina;
-    const contenedorTarjetas = document.querySelector('.artist-cards');
-    const paginacionContainer = document.getElementById('pagination');
-    contenedorTarjetas.innerHTML = '';
-    paginacionContainer.innerHTML = '';
-
-    const inicio = (pagina - 1) * ARTISTAS_POR_PAGINA;
+function mostrarArtistas() {
+    const inicio = (paginaActual - 1) * ARTISTAS_POR_PAGINA;
     const fin = inicio + ARTISTAS_POR_PAGINA;
-    const artistasPagina = artistas.slice(inicio, fin);
+    const artistasPagina = artistasFiltrados.slice(inicio, fin);
+
+    const contenedorTarjetas = document.querySelector('.artist-cards');
+    contenedorTarjetas.innerHTML = '';
 
     artistasPagina.forEach(artista => {
         const tarjeta = document.createElement('div');
@@ -55,7 +53,7 @@ function mostrarArtistas(artistas, pagina = 1) {
         contenedorTarjetas.appendChild(tarjeta);
     });
 
-    const totalPaginas = Math.ceil(artistas.length / ARTISTAS_POR_PAGINA);
+    const totalPaginas = Math.ceil(artistasFiltrados.length / ARTISTAS_POR_PAGINA);
     for (let i = 1; i <= totalPaginas; i++) {
         const boton = document.createElement('button');
         boton.innerText = i;
@@ -64,9 +62,10 @@ function mostrarArtistas(artistas, pagina = 1) {
             boton.classList.add('active');
         }
         boton.addEventListener('click', () => {
-            mostrarArtistas(artistas, i);
+            mostrarArtistas();
             window.scrollTo(0, 0);
         });
+        const paginacionContainer = document.getElementById('pagination');
         paginacionContainer.appendChild(boton);
     }
 }
@@ -112,29 +111,27 @@ function buscarArtistas() {
     actualizarPaginacion(artistasFiltrados.length);
 }
 
-function actualizarPaginacion(totalArtistas = todosLosArtistas.length) {
-    const totalPaginas = Math.ceil(totalArtistas / ARTISTAS_POR_PAGINA);
+function actualizarPaginacion() {
+    const totalPaginas = Math.ceil(artistasFiltrados.length / ARTISTAS_POR_PAGINA);
     const paginacion = document.getElementById('pagination');
     paginacion.innerHTML = '';
 
     for (let i = 1; i <= totalPaginas; i++) {
         const boton = document.createElement('button');
         boton.innerText = i;
-        boton.addEventListener('click', () => cambiarPagina(i));
+        boton.classList.add('pagination-btn');
         if (i === paginaActual) {
             boton.classList.add('active');
         }
+        boton.addEventListener('click', () => cambiarPagina(i));
         paginacion.appendChild(boton);
     }
 }
 
 function cambiarPagina(numeroPagina) {
     paginaActual = numeroPagina;
-    const inicio = (paginaActual - 1) * ARTISTAS_POR_PAGINA;
-    const fin = inicio + ARTISTAS_POR_PAGINA;
-    mostrarArtistas(todosLosArtistas.slice(inicio, fin));
+    mostrarArtistas();
     actualizarPaginacion();
-    
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
@@ -153,7 +150,7 @@ function aplicarFiltros() {
     const generoSeleccionado = document.getElementById('genreFilter').value;
     const busqueda = document.getElementById('searchInput').value.toLowerCase();
 
-    const artistasFiltrados = todosLosArtistas.filter(artista => {
+    artistasFiltrados = todosLosArtistas.filter(artista => {
         const cumpleEstado = estadoSeleccionado === 'all' || 
             (estadoSeleccionado === 'alive' && !artista.fechaFallecimiento) || 
             (estadoSeleccionado === 'deceased' && artista.fechaFallecimiento);
@@ -167,9 +164,9 @@ function aplicarFiltros() {
         return cumpleEstado && cumpleGenero && cumpleBusqueda;
     });
 
-    mostrarArtistas(artistasFiltrados);
-    const totalPaginas = Math.ceil(artistasFiltrados.length / ARTISTAS_POR_PAGINA);
-    crearBotonesPaginacion(totalPaginas);
+    paginaActual = 1;
+    mostrarArtistas();
+    actualizarPaginacion();
 }
 
 function cargarArtistas() {
@@ -177,7 +174,9 @@ function cargarArtistas() {
         .then(response => response.json())
         .then(data => {
             todosLosArtistas = data.vocalistas;
-            mostrarArtistas(todosLosArtistas);
+            artistasFiltrados = todosLosArtistas;
+            mostrarArtistas();
+            actualizarPaginacion();
         })
         .catch(error => console.error('Error:', error));
 }
