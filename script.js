@@ -26,14 +26,14 @@ async function obtenerArtistas() {
 }
 
 function mostrarArtistas(artistas, pagina = 1) {
-    console.log('Mostrando artistas...', artistas.length); // Para depuración
+    console.log('Mostrando artistas...', artistas.length); 
     paginaActual = pagina;
     const contenedorTarjetas = document.querySelector('.artist-cards');
     const paginacionContainer = document.getElementById('pagination');
     contenedorTarjetas.innerHTML = '';
     paginacionContainer.innerHTML = '';
 
-    const inicio = (paginaActual - 1) * ARTISTAS_POR_PAGINA;
+    const inicio = (pagina - 1) * ARTISTAS_POR_PAGINA;
     const fin = inicio + ARTISTAS_POR_PAGINA;
     const artistasPagina = artistas.slice(inicio, fin);
 
@@ -50,7 +50,7 @@ function mostrarArtistas(artistas, pagina = 1) {
             <p>Nacimiento: ${fechaNacimiento}</p>
             <p>Fallecimiento: ${fechaFallecimiento}</p>
             <p>Género: ${artista.genero || 'No especificado'}</p>
-            <a href="biografia.html?name=${encodeURIComponent(artista.nombre)}" class="ver-mas-btn">Ver más</a>
+            <a href="biografia.html?name=${encodeURIComponent(artista.nombre)}" class="ver-mas-btn">Biofrafía</a>
         `;
         contenedorTarjetas.appendChild(tarjeta);
     });
@@ -88,9 +88,9 @@ async function obtenerInfoAdicional(nombreArtista) {
 }
 
 function mostrarInfoAdicional(artistaInfo) {
-    // Aquí puedes crear un modal o un elemento en la página para mostrar la información adicional
+    
     console.log('Información adicional del artista:', artistaInfo);
-    // Por ahora, solo mostraremos un alert con algunos datos
+    
     alert(`
         Nombre: ${artistaInfo.name}
         Oyentes: ${artistaInfo.stats.listeners}
@@ -149,24 +149,24 @@ function mostrarMensajeCarga(mostrar) {
 }
 
 function aplicarFiltros() {
-    console.log('Aplicando filtros...'); // Para depuración
-    const decadaSeleccionada = document.getElementById('decadeFilter').value;
     const estadoSeleccionado = document.getElementById('statusFilter').value;
     const generoSeleccionado = document.getElementById('genreFilter').value;
-
-    console.log('Filtros seleccionados:', { decadaSeleccionada, estadoSeleccionado, generoSeleccionado }); // Para depuración
+    const busqueda = document.getElementById('searchInput').value.toLowerCase();
 
     const artistasFiltrados = todosLosArtistas.filter(artista => {
-        const cumpleDecada = decadaSeleccionada === 'all' || (artista.fechaNacimiento && new Date(artista.fechaNacimiento).getFullYear().toString().startsWith(decadaSeleccionada.slice(0, 3)));
         const cumpleEstado = estadoSeleccionado === 'all' || 
             (estadoSeleccionado === 'alive' && !artista.fechaFallecimiento) || 
             (estadoSeleccionado === 'deceased' && artista.fechaFallecimiento);
-        const cumpleGenero = generoSeleccionado === 'all' || (artista.genero && artista.genero.toLowerCase().includes(generoSeleccionado.toLowerCase()));
+        
+        const cumpleGenero = generoSeleccionado === 'all' || 
+            (artista.genero && artista.genero.toLowerCase().includes(generoSeleccionado.toLowerCase()));
+        
+        const cumpleBusqueda = busqueda === '' || 
+            artista.nombre.toLowerCase().includes(busqueda);
 
-        return cumpleDecada && cumpleEstado && cumpleGenero;
+        return cumpleEstado && cumpleGenero && cumpleBusqueda;
     });
 
-    console.log('Artistas filtrados:', artistasFiltrados.length); // Para depuración
     mostrarArtistas(artistasFiltrados);
 }
 
@@ -175,24 +175,48 @@ function cargarArtistas() {
         .then(response => response.json())
         .then(data => {
             todosLosArtistas = data.vocalistas;
-            console.log('Artistas cargados:', todosLosArtistas.length); // Para depuración
             mostrarArtistas(todosLosArtistas);
         })
         .catch(error => console.error('Error:', error));
 }
 
+function verBiografia(id) {
+    window.location.href = `biografia.html?id=${id}`;
+}
+
+function verBiografia(nombre) {
+    window.location.href = `biografia.html?nombre=${encodeURIComponent(nombre)}`;
+}
+
+function mostrarBiografia(artista) {
+    const contenedorPrincipal = document.querySelector('.container');
+    contenedorPrincipal.innerHTML = `
+        <div class="biografia">
+            <div class="biografia-izquierda">
+                <img src="${artista.imagenUrl}" alt="${artista.nombre}">
+                <h2>${artista.nombre}</h2>
+                <p>Nacimiento: ${artista.fechaNacimiento}</p>
+                ${artista.fechaFallecimiento ? `<p>Fallecimiento: ${artista.fechaFallecimiento}</p>` : ''}
+                <p>Género: ${artista.genero}</p>
+            </div>
+            <div class="biografia-derecha">
+                <h3>Biografía</h3>
+                <p>${artista.biografia || 'Biografía no disponible.'}</p>
+            </div>
+        </div>
+        
+    `;
+
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     cargarArtistas();
     
-    const searchButton = document.getElementById('search-button');
-    searchButton.addEventListener('click', buscarArtistas);
-    
-    const searchInput = document.getElementById('search-input');
-    searchInput.addEventListener('keyup', (event) => {
-        if (event.key === 'Enter') {
-            buscarArtistas();
+    document.getElementById('filterButton').addEventListener('click', aplicarFiltros);
+    document.getElementById('searchButton').addEventListener('click', aplicarFiltros);
+    document.getElementById('searchInput').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            aplicarFiltros();
         }
     });
-    
-    document.getElementById('filterButton').addEventListener('click', aplicarFiltros);
 });
