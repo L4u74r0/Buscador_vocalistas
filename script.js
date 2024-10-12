@@ -3,7 +3,7 @@ const LASTFM_API_URL = 'https://ws.audioscrobbler.com/2.0/';
 const WIKIPEDIA_API_URL = 'https://en.wikipedia.org/w/api.php';
 
 let todosLosArtistas = [];
-const ARTISTAS_POR_PAGINA = 10;
+const ARTISTAS_POR_PAGINA = 9;
 let paginaActual = 1;
 
 async function obtenerArtistas() {

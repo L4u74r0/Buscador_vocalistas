@@ -71,11 +71,11 @@
       "genero": "Alternative Metal, Rap Rock"
     },
     {
-      "nombre": "Maynard James Keenan",
-      "imagenUrl": "https://www.rollingstone.com/wp-content/uploads/2018/06/rs-187526-GettyImages_86116935.jpg?w=1581&h=1054&crop=1",
-      "fechaNacimiento": "1964-04-17",
+      "nombre": "Phil Anselmo",
+      "imagenUrl": "https://upload.wikimedia.org/wikipedia/it/5/5b/Walk_%28Pantera%29.png",
+      "fechaNacimiento": "1968-06-30",
       "fechaFallecimiento": null,
-      "genero": "Progressive Metal, Alternative Metal"
+      "genero": "Heavy Metal, Groove Metal, Thrash Metal"
     },
     {
       "nombre": "Liam Gallagher",
@@ -335,6 +335,20 @@
         "fechaNacimiento": "1986-08-28",
         "fechaFallecimiento": null,
         "genero": "Alternative Rock, Art Rock"
+    },
+    {
+      "nombre": "Jonathan Davis",
+      "imagenUrl": "https://monterreyrock.com/wp-content/uploads/2018/02/jorn-jonathan-davis.jpg",
+      "fechaNacimiento": "1971-01-18",
+      "fechaFallecimiento": null,
+      "genero": "Nu Metal, Alternative Metal"
+    },
+    {
+      "nombre": "Fred Durst",
+      "imagenUrl": "https://live.staticflickr.com/7428/11485239164_d2d6465400_b.jpg",
+      "fechaNacimiento": "1970-08-20",
+      "fechaFallecimiento": null,
+      "genero": "Nu Metal, Rap Rock"
     }
   ]
 }
