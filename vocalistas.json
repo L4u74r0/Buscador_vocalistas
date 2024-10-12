@@ -1,0 +1,339 @@
+{
+  "vocalistas": [
+    {
+      "nombre": "Kurt Cobain",
+      "imagenUrl": "https://cdn.britannica.com/82/101882-050-9FA7F900/Kurt-Cobain-Nirvana-1993.jpg",
+      "fechaNacimiento": "1967-02-20",
+      "fechaFallecimiento": "1994-04-05",
+      "genero": "Grunge, Alternative Rock"
+    },
+    {
+      "nombre": "Eddie Vedder",
+      "imagenUrl": "https://www.billboard.com/wp-content/uploads/media/eddie-vedder-pearl-jam-1992-nyc-performance-billboard-650.jpg?w=650",
+      "fechaNacimiento": "1964-12-23",
+      "fechaFallecimiento": null,
+      "genero": "Grunge, Alternative Rock"
+    },
+    {
+      "nombre": "Chris Cornell",
+      "imagenUrl": "https://i0.wp.com/www.culturesonar.com/wp-content/uploads/2017/06/chris-cornell-getty.jpg?fit=960%2C540&ssl=1",
+      "fechaNacimiento": "1964-07-20",
+      "fechaFallecimiento": "2017-05-18",
+      "genero": "Grunge, Alternative Rock"
+    },
+    {
+      "nombre": "Layne Staley",
+      "imagenUrl": "https://images.squarespace-cdn.com/content/v1/56858337cbced60d3b293aef/1503370386881-0VR5XWD83SAE2EAO4AEE/Albumism_LayneStaley_August_22_1967.jpg",
+      "fechaNacimiento": "1967-08-22",
+      "fechaFallecimiento": "2002-04-05",
+      "genero": "Grunge, Alternative Metal"
+    },
+    {
+      "nombre": "Scott Weiland",
+      "imagenUrl": "https://thumbs.dreamstime.com/b/scott-weiland-de-rev%C3%B3lver-terciopelo-durante-el-concierto-italy-imola-junio-heineken-jammin-festival-autodromo-di-cantante-velvet-185385678.jpg",
+      "fechaNacimiento": "1967-10-27",
+      "fechaFallecimiento": "2015-12-03",
+      "genero": "Alternative Rock, Grunge"
+    },
+    {
+      "nombre": "Thom Yorke",
+      "imagenUrl": "https://i.pinimg.com/originals/3c/53/75/3c53752631acfdfc3bf460885ccbf739.jpg",
+      "fechaNacimiento": "1968-10-07",
+      "fechaFallecimiento": null,
+      "genero": "Alternative Rock, Art Rock"
+    },
+    {
+      "nombre": "Billy Corgan",
+      "imagenUrl": "https://media.pitchfork.com/photos/5a871491e32a32385b845def/4:3/w_524,h_393,c_limit/Smashing-Pumpkins-Billy-Corgan.jpg",
+      "fechaNacimiento": "1967-03-17",
+      "fechaFallecimiento": null,
+      "genero": "Alternative Rock, Grunge"
+    },
+    {
+      "nombre": "Dave Grohl",
+      "imagenUrl": "https://www.guitarlobby.com/wp-content/uploads/2021/03/Dave-Grohl-Guitars-and-Gear-Featured-Image.jpg",
+      "fechaNacimiento": "1969-01-14",
+      "fechaFallecimiento": null,
+      "genero": "Grunge, Alternative Rock, Hard Rock"
+    },
+    {
+      "nombre": "Anthony Kiedis",
+      "imagenUrl": "https://i.pinimg.com/236x/36/0f/18/360f189cf627941b55d7d74a2b340965.jpg",
+      "fechaNacimiento": "1962-11-01",
+      "fechaFallecimiento": null,
+      "genero": "Alternative Rock, Funk Rock"
+    },
+    {
+      "nombre": "Zack de la Rocha",
+      "imagenUrl": "https://scontent.frcq1-1.fna.fbcdn.net/v/t1.6435-9/49947098_1276698832470441_252802659805822976_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeHgARqNEswkNtPTWfYDLa4gmcWMwXtY_f6ZxYzBe1j9_j80R0zNXUn2rtCvvZGN6ziSc_CkWT9QczSigb_o5scd&_nc_ohc=HF1ihHTynmUQ7kNvgE6Cpa1&_nc_ht=scontent.frcq1-1.fna&_nc_gid=A74_qsMYQT4C-blen1jsNYv&oh=00_AYATJiQMpaDYlrdpvlY3fQ8ZUFhtFO4iK7i_XtpRONIFaA&oe=67316D55",
+      "fechaNacimiento": "1970-01-12",
+      "fechaFallecimiento": null,
+      "genero": "Alternative Metal, Rap Rock"
+    },
+    {
+      "nombre": "Maynard James Keenan",
+      "imagenUrl": "https://lauralieff.com/wp-content/uploads/2013/07/Maynard-James-Keenan.jpg",
+      "fechaNacimiento": "1964-04-17",
+      "fechaFallecimiento": null,
+      "genero": "Progressive Metal, Alternative Metal"
+    },
+    {
+      "nombre": "Liam Gallagher",
+      "imagenUrl": "https://www.visions.de/wp-content/uploads/20149-Liam-Gallagher_7I6A7481-CREDIT-CHARLIE-LIGHTENING.webp",
+      "fechaNacimiento": "1972-09-21",
+      "fechaFallecimiento": null,
+      "genero": "Britpop, Rock"
+    },
+    {
+      "nombre": "Damon Albarn",
+      "imagenUrl": "https://i.pinimg.com/originals/07/48/ab/0748ab23efb11ae75a1935efa09ba2a4.jpg",
+      "fechaNacimiento": "1968-03-23",
+      "fechaFallecimiento": null,
+      "genero": "Britpop, Alternative Rock"
+    },
+    {
+      "nombre": "Gavin Rossdale",
+      "imagenUrl": "https://preview.redd.it/gavin-rossdale-late-90s-v0-7kup59eic0y91.jpg?width=640&crop=smart&auto=webp&s=9eac6cd3f6312ddb4db3abbfa07b2e0a4e28ae7b",
+      "fechaNacimiento": "1965-10-30",
+      "fechaFallecimiento": null,
+      "genero": "Grunge, Post-Grunge"
+    },
+    {
+      "nombre": "Shirley Manson",
+      "imagenUrl": "https://i.redd.it/shirley-manson-1990s-v0-ts3poj4zsjlc1.jpg?width=700&format=pjpg&auto=webp&s=8dab5abf8b59f1c19e6bd077e4689774748ca083",
+      "fechaNacimiento": "1966-08-26",
+      "fechaFallecimiento": null,
+      "genero": "Alternative Rock, Electronic Rock"
+    },
+    {
+      "nombre": "Alanis Morissette",
+      "imagenUrl": "https://64.media.tumblr.com/a70a8aeedd0465134a2972fb6a1d3a23/0c20a19be82d32db-06/s640x960/f8d6b9c0e11bba5303075bec06362b03cc85ec58.jpg",
+      "fechaNacimiento": "1974-06-01",
+      "fechaFallecimiento": null,
+      "genero": "Alternative Rock, Pop Rock"
+    },
+    {
+      "nombre": "Courtney Love",
+      "imagenUrl": "https://img.buzzfeed.com/buzzfeed-static/static/2024-04/16/10/asset/563952800ef8/sub-buzz-4513-1713262835-12.jpg?crop=1468%3A1767%3B127%2C0&downsize=700%3A%2A&output-quality=auto&output-format=auto",
+      "fechaNacimiento": "1964-07-09",
+      "fechaFallecimiento": null,
+      "genero": "Alternative Rock, Grunge"
+    },
+    {
+      "nombre": "Gwen Stefani",
+      "imagenUrl": "https://i.pinimg.com/736x/4a/11/ba/4a11ba828f676bb00bb28add981b27da.jpg",
+      "fechaNacimiento": "1969-10-03",
+      "fechaFallecimiento": null,
+      "genero": "Alternative Rock, Pop Rock, Ska Punk"
+    },
+    {
+      "nombre": "Rob Zombie",
+      "imagenUrl": "https://i.pinimg.com/originals/26/9b/0d/269b0d69f6dd7d968147b1593129ac31.jpg",
+      "fechaNacimiento": "1965-01-12",
+      "fechaFallecimiento": null,
+      "genero": "Industrial Metal, Heavy Metal"
+    },
+    {
+      "nombre": "Marilyn Manson",
+      "imagenUrl": "https://i.pinimg.com/736x/9f/87/68/9f8768d033237d156ca0e403b0804f83.jpg",
+      "fechaNacimiento": "1969-01-05",
+      "fechaFallecimiento": null,
+      "genero": "Industrial Metal, Alternative Metal"
+    },
+    {
+      "nombre": "Trent Reznor",
+      "imagenUrl": "https://i.pinimg.com/564x/b7/4c/6e/b74c6e31818dc91f473d80ef55da4a34.jpg",
+      "fechaNacimiento": "1965-05-17",
+      "fechaFallecimiento": null,
+      "genero": "Industrial Rock, Alternative Rock"
+    },
+    {
+      "nombre": "Chad Kroeger",
+      "imagenUrl": "https://m.media-amazon.com/images/M/MV5BMTg4MzE4ODkwMl5BMl5BanBnXkFtZTYwMjg0MjU0._V1_.jpg",
+      "fechaNacimiento": "1974-11-15",
+      "fechaFallecimiento": null,
+      "genero": "Post-Grunge, Alternative Rock"
+    },
+    {
+      "nombre": "Serj Tankian",
+      "imagenUrl": "https://scontent.frcq1-1.fna.fbcdn.net/v/t1.6435-9/133622547_5525687777456659_1637298803060221973_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeEr0PJ__9coLbHYf6-OkacUPAhUSPeIDxc8CFRI94gPF0gyV-wfdvOvOay2iAEhLS7Cl2-YiWz-FPXCV6EunMZ4&_nc_ohc=4pMJvECnIhEQ7kNvgEu3YJM&_nc_ht=scontent.frcq1-1.fna&_nc_gid=AC5dmc-KW1MgABFhs1T0TEh&oh=00_AYCGCPSb-1kfw0chMHH2CTSd3Y9P_rcyePAZDHWzPuZ9bA&oe=6731543B",
+      "fechaNacimiento": "1967-08-21",
+      "fechaFallecimiento": null,
+      "genero": "Alternative Metal, Progressive Metal"
+    },
+    {
+      "nombre": "Chester Bennington",
+      "imagenUrl": "https://www.billboard.com/wp-content/uploads/media/chester-bennington-linkin-park-live-2001-a-billboard-1548.jpg",
+      "fechaNacimiento": "1976-03-20",
+      "fechaFallecimiento": "2017-07-20",
+      "genero": "Nu Metal, Alternative Rock"
+    },
+    {
+      "nombre": "Amy Lee",
+      "imagenUrl": "https://thumbs.modthesims2.com/img/1/8/2/0/9/9/MTS_necKros-220904-14521.jpg",
+      "fechaNacimiento": "1981-12-13",
+      "fechaFallecimiento": null,
+      "genero": "Gothic Metal, Alternative Metal"
+    },
+    {
+      "nombre": "Gerard Way",
+      "imagenUrl": "https://www.rollingstone.com/wp-content/uploads/2018/06/rs-181479-114640657.jpg",
+      "fechaNacimiento": "1977-04-09",
+      "fechaFallecimiento": null,
+      "genero": "Alternative Rock, Pop Punk"
+    },
+    {
+      "nombre": "Hayley Williams",
+      "imagenUrl": "https://thumbs.dreamstime.com/b/hayley-williams-paramore-performing-live-14634787.jpg",
+      "fechaNacimiento": "1988-12-27",
+      "fechaFallecimiento": null,
+      "genero": "Pop Punk, Alternative Rock"
+    },
+    {
+      "nombre": "Brandon Flowers",
+      "imagenUrl": "https://pittnews.com/wp-content/uploads/2017/09/The-Killers_TNS-596x900.jpg",
+      "fechaNacimiento": "1981-06-21",
+      "fechaFallecimiento": null,
+      "genero": "Alternative Rock, Indie Rock"
+    },
+    {
+      "nombre": "Julian Casablancas",
+      "imagenUrl": "https://i.pinimg.com/474x/01/a6/1b/01a61b933b528b97aa4ad1b8d20de273.jpg",
+      "fechaNacimiento": "1978-08-23",
+      "fechaFallecimiento": null,
+      "genero": "Indie Rock, Garage Rock Revival"
+    },
+    {
+      "nombre": "Jack White",
+      "imagenUrl": "https://i.pinimg.com/736x/43/5c/c9/435cc9f0dc7bc8883fc0ec40649fdc9c.jpg",
+      "fechaNacimiento": "1975-07-09",
+      "fechaFallecimiento": null
+    },
+    {
+      "nombre": "Corey Taylor",
+      "imagenUrl": "https://fmrockandpop.com/media/k2/items/cache/f9e4fdfb29e155686bf7df5fcac1b78f_L.webp",
+      "fechaNacimiento": "1973-12-08",
+      "fechaFallecimiento": null,
+      "genero": "Nu Metal, Alternative Metal"
+    },
+    {
+      "nombre": "Matt Bellamy",
+      "imagenUrl": "https://i.redd.it/01obs2fp73p91.jpg",
+      "fechaNacimiento": "1978-06-09",
+      "fechaFallecimiento": null,
+      "genero": "Alternative Rock, Progressive Rock"
+    },
+    {
+      "nombre": "Billie Joe Armstrong",
+      "imagenUrl": "https://guitarratotal.net/wp-content/uploads/billie-joe-armstrong-2.jpg",
+      "fechaNacimiento": "1972-02-17",
+      "fechaFallecimiento": null,
+      "genero": "Punk Rock, Alternative Rock"
+    },
+    {
+      "nombre": "Chris Martin",
+      "imagenUrl": "https://hips.hearstapps.com/hmg-prod/images/chris-martin-of-coldplay-performs-at-hampden-park-on-august-news-photo-1679917338.jpg",
+      "fechaNacimiento": "1977-03-02",
+      "fechaFallecimiento": null,
+      "genero": "Alternative Rock, Pop Rock"
+    },
+    {
+      "nombre": "Josh Homme",
+      "imagenUrl": "https://i.pinimg.com/736x/31/9b/c5/319bc5f7a65ce2cd85fba5ad6e40f6f9.jpg",
+      "fechaNacimiento": "1973-05-17",
+      "fechaFallecimiento": null,
+      "genero": "Alternative Rock, Stoner Rock"
+    },
+    {
+      "nombre": "Ville Valo",
+      "imagenUrl": "https://i.ytimg.com/vi/rNyNiWI_hpE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCCDcFVty7-CxKCpF-ifK7At96jvA",
+      "fechaNacimiento": "1976-11-22",
+      "fechaFallecimiento": null,
+      "genero": "Alternative Rock, Post-Punk Revival"
+    },
+    {
+      "nombre": "James Hetfield",
+      "imagenUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/James_Hetfield_live_in_Amesterdam_29_April_2023.jpg/800px-James_Hetfield_live_in_Amesterdam_29_April_2023.jpg",
+      "fechaNacimiento": "1963-08-03",
+      "fechaFallecimiento": null,
+      "genero": "Heavy Metal, Thrash Metal"
+    },
+    {
+      "nombre": "Deryck Whibley",
+      "imagenUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/2017_RiP_-_Sum_41_-_Deryck_Whibley_-_by_2eight_-_8SC8080.jpg/800px-2017_RiP_-_Sum_41_-_Deryck_Whibley_-_by_2eight_-_8SC8080.jpg",
+      "fechaNacimiento": "1980-03-21",
+      "fechaFallecimiento": null,
+      "genero": "Pop Punk, Post-Hardcore"
+    },
+    {
+      "nombre": "Patrick Stump",
+      "imagenUrl": "https://people.com/thmb/nV_lJAf95yqq_9S6iFvlkjA9TmA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(749x0:751x2)/patrick-stump-tout-061224-04cb2737181b49fabecf77ce18dcd908.jpg",
+      "fechaNacimiento": "1984-04-27",
+      "fechaFallecimiento": null,
+      "genero": "Pop Punk, Alternative Rock"
+    },
+    {
+      "nombre": "Jared Leto",
+      "imagenUrl": "https://www.kyivpost.com/wp-content/uploads/2019/07/STAS-KARTASHOV-10.jpg",
+      "fechaNacimiento": "1971-12-26",
+      "fechaFallecimiento": null,
+      "genero": "Alternative Rock, Industrial Rock"
+    },
+    {
+      "nombre": "Adam Levine",
+      "imagenUrl": "https://i.pinimg.com/736x/27/60/4c/27604c59f44d050125256ba2ae66e718.jpg",
+      "fechaNacimiento": "1979-03-18",
+      "fechaFallecimiento": null,
+      "genero": "Pop Rock, Alternative Rock"
+    },
+    {
+      "nombre": "Dan Reynolds",
+      "imagenUrl": "https://conteudo.imguol.com.br/c/entretenimento/cb/2024/03/08/dan-reynolds-do-imagine-dragons-se-apresenta-no-park-hayarkon-em-29-de-agosto-de-2023-em-tel-aviv-israel-1709910709743_v2_3x4.jpg",
+      "fechaNacimiento": "1987-07-14",
+      "fechaFallecimiento": null,
+      "genero": "Alternative Rock, Pop Rock"
+    },
+    {
+      "nombre": "Brendon Urie",
+      "imagenUrl": "https://www.radiorock.com.br/wp-content/uploads/2023/01/brandon-urie-panic-at-the-disco.jpg",
+      "fechaNacimiento": "1987-04-12",
+      "fechaFallecimiento": null,
+      "genero": "Pop Rock, Alternative Rock"
+    },
+    {
+      "nombre": "Tyler Joseph",
+      "imagenUrl": "https://i.pinimg.com/736x/c6/27/da/c627da519e14528cc922591a4930f7b2.jpg",
+      "fechaNacimiento": "1988-12-01",
+      "fechaFallecimiento": null,
+      "genero": "Alternative Rock, Pop Rock"
+    },
+    {
+      "nombre": "Caleb Followill",
+      "imagenUrl": "https://topguitar.pl/wp-content/uploads/2013/08/Caleb-Followill.jpg",
+      "fechaNacimiento": "1982-01-14",
+      "fechaFallecimiento": null,
+      "genero": "Alternative Rock, Southern Rock"
+    },
+    {
+      "nombre": "Win Butler",
+      "imagenUrl": "https://www.rollingstone.com/wp-content/uploads/2018/06/rs-12594-091113-arcade-fire-624-1378914579.jpg?w=624&h=420&crop=1",
+      "fechaNacimiento": "1980-04-14",
+      "fechaFallecimiento": null,
+      "genero": "Alternative Rock, Indie Rock"
+    },
+    {
+      "nombre": "Alex Turner",
+      "imagenUrl": "https://i.pinimg.com/736x/15/46/8c/15468c031319ec904d3acef18d37a2eb.jpg",
+      "fechaNacimiento": "1986-01-06",
+      "fechaFallecimiento": null,
+      "genero": "Indie Rock, Alternative Rock"
+    },
+    {
+        "nombre": "Florence Welch",
+        "imagenUrl": "https://music-b26f.kxcdn.com/wp-content/uploads/2010/12/001-2327_2.JPG",
+        "fechaNacimiento": "1986-08-28",
+        "fechaFallecimiento": null,
+        "genero": "Alternative Rock, Art Rock"
+    }
+  ]
+}
