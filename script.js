@@ -168,6 +168,8 @@ function aplicarFiltros() {
     });
 
     mostrarArtistas(artistasFiltrados);
+    const totalPaginas = Math.ceil(artistasFiltrados.length / ARTISTAS_POR_PAGINA);
+    crearBotonesPaginacion(totalPaginas);
 }
 
 function cargarArtistas() {
@@ -209,6 +211,37 @@ function mostrarBiografia(artista) {
 
 }
 
+function crearBotonesPaginacion(totalPaginas) {
+    const paginacion = document.getElementById('pagination');
+    paginacion.innerHTML = '';
+
+    for (let i = 1; i <= totalPaginas; i++) {
+        const boton = document.createElement('button');
+        boton.textContent = i;
+        boton.classList.add('pagination-btn');
+        if (i === paginaActual) {
+            boton.classList.add('active');
+        }
+        boton.addEventListener('click', () => {
+            paginaActual = i;
+            aplicarFiltros();
+            actualizarBotonesPaginacion();
+        });
+        paginacion.appendChild(boton);
+    }
+}
+
+function actualizarBotonesPaginacion() {
+    const botones = document.querySelectorAll('.pagination-btn');
+    botones.forEach((boton, index) => {
+        if (index + 1 === paginaActual) {
+            boton.classList.add('active');
+        } else {
+            boton.classList.remove('active');
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     cargarArtistas();
     
@@ -219,4 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
             aplicarFiltros();
         }
     });
+
+    // Llamada inicial para mostrar todos los artistas y crear la paginación
+    aplicarFiltros();
 });
