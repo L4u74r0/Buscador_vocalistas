@@ -50,7 +50,7 @@ function mostrarArtistas(artistas, pagina = 1) {
             <p>Nacimiento: ${fechaNacimiento}</p>
             <p>Fallecimiento: ${fechaFallecimiento}</p>
             <p>Género: ${artista.genero || 'No especificado'}</p>
-            <a href="biografia.html?name=${encodeURIComponent(artista.nombre)}" class="ver-mas-btn">Biofrafía</a>
+            <a href="biografia.html?name=${encodeURIComponent(artista.nombre)}" class="ver-mas-btn">Biografía</a>
         `;
         contenedorTarjetas.appendChild(tarjeta);
     });
