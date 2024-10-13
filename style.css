@@ -123,25 +123,73 @@ h1 {
     background-color: #0056b3;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .artist-cards {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .artist-image {
         width: 200px;
-        height: 280px;
+        height: 200px;
     }
 
     .artist-name {
         font-size: 1.4em;
-        max-width: 180px;
+        max-width: 200px;
     }
 
     .artist-card p {
         font-size: 1em;
     }
 }
+
+@media (max-width: 700px) {
+    .artist-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .artist-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .artist-name {
+        font-size: 1.4em;
+        max-width: 200px;
+    }
+
+    .artist-card p {
+        font-size: 1em;
+    }
+
+    .artist-info-container {
+        flex-direction: column;
+    }
+
+    .artist-image-container {
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .artist-image-bio {
+        width: 150px;
+        height: 200px;
+        margin-right: 15px;
+    }
+
+    .artist-dates {
+        flex: 1;
+        align-items: flex-start;
+    }
+
+    .artist-bio {
+        order: 1;
+        margin-top: 20px;
+    }
+}
+
+
 
 .artist-info-container {
     background: #1a1a1a;
