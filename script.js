@@ -2,12 +2,15 @@ const LASTFM_API_KEY = '76f33100dd7284b4c8435ff478a8d1b0';
 const LASTFM_API_URL = 'https://ws.audioscrobbler.com/2.0/';
 const WIKIPEDIA_API_URL = 'https://en.wikipedia.org/w/api.php';
 
+/* VARIABLES */
 let todosLosArtistas = [];
 const ARTISTAS_POR_PAGINA = 9;
 let paginaActual = 1;
 
 let artistasFiltrados = [];
 
+
+/* OBTENER ARTISTAS */
 async function obtenerArtistas() {
     try {
         mostrarMensajeCarga(true);
@@ -27,6 +30,8 @@ async function obtenerArtistas() {
     }
 }
 
+
+/* MOSTRAR ARTISTAS */
 function mostrarArtistas() {
     const inicio = (paginaActual - 1) * ARTISTAS_POR_PAGINA;
     const fin = inicio + ARTISTAS_POR_PAGINA;
@@ -53,6 +58,7 @@ function mostrarArtistas() {
         contenedorTarjetas.appendChild(tarjeta);
     });
 
+    /* PAGINACIÓN */
     const totalPaginas = Math.ceil(artistasFiltrados.length / ARTISTAS_POR_PAGINA);
     for (let i = 1; i <= totalPaginas; i++) {
         const boton = document.createElement('button');
@@ -70,6 +76,7 @@ function mostrarArtistas() {
     }
 }
 
+/* OBTENER INFORMACIÓN ADICIONAL DEL ARTISTA */
 async function obtenerInfoAdicional(nombreArtista) {
     try {
         const url = `http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${encodeURIComponent(nombreArtista)}&api_key=TU_API_KEY&format=json`;
@@ -86,6 +93,8 @@ async function obtenerInfoAdicional(nombreArtista) {
     }
 }
 
+
+/* MOSTRAR INFORMACIÓN ADICIONAL DEL ARTISTA */
 function mostrarInfoAdicional(artistaInfo) {
     
     console.log('Información adicional del artista:', artistaInfo);
@@ -98,6 +107,8 @@ function mostrarInfoAdicional(artistaInfo) {
     `);
 }
 
+
+/* BUSCADOR */
 function buscarArtistas() {
     const searchInput = document.getElementById('search-input');
     const searchTerm = searchInput.value.toLowerCase();
@@ -111,6 +122,8 @@ function buscarArtistas() {
     actualizarPaginacion(artistasFiltrados.length);
 }
 
+
+/* ACTUALIZAR PAGINACIÓN */
 function actualizarPaginacion() {
     const totalPaginas = Math.ceil(artistasFiltrados.length / ARTISTAS_POR_PAGINA);
     const paginacion = document.getElementById('pagination');
@@ -128,6 +141,8 @@ function actualizarPaginacion() {
     }
 }
 
+
+/* CAMBIAR DE PÁGINA */
 function cambiarPagina(numeroPagina) {
     paginaActual = numeroPagina;
     mostrarArtistas();
@@ -138,13 +153,8 @@ function cambiarPagina(numeroPagina) {
     });
 }
 
-function mostrarMensajeCarga(mostrar) {
-    const mensajeCarga = document.getElementById('loading-message');
-    if (mensajeCarga) {
-        mensajeCarga.style.display = mostrar ? 'block' : 'none';
-    }
-}
 
+/* FILTROS */
 function aplicarFiltros() {
     const estadoSeleccionado = document.getElementById('statusFilter').value;
     const generoSeleccionado = document.getElementById('genreFilter').value;
@@ -169,6 +179,8 @@ function aplicarFiltros() {
     actualizarPaginacion();
 }
 
+
+/* CARGAR ARTISTAS */
 function cargarArtistas() {
     fetch('vocalistas.json')
         .then(response => response.json())
@@ -181,14 +193,12 @@ function cargarArtistas() {
         .catch(error => console.error('Error:', error));
 }
 
-function verBiografia(id) {
-    window.location.href = `biografia.html?id=${id}`;
-}
-
 function verBiografia(nombre) {
     window.location.href = `biografia.html?nombre=${encodeURIComponent(nombre)}`;
 }
 
+
+/* MOSTRAR BIOGRAFÍA */
 function mostrarBiografia(artista) {
     const contenedorPrincipal = document.querySelector('.container');
     contenedorPrincipal.innerHTML = `
@@ -210,6 +220,8 @@ function mostrarBiografia(artista) {
 
 }
 
+
+/* CREAR BOTONES DE PAGINACIÓN */
 function crearBotonesPaginacion(totalPaginas) {
     const paginacion = document.getElementById('pagination');
     paginacion.innerHTML = '';
@@ -241,6 +253,8 @@ function actualizarBotonesPaginacion() {
     });
 }
 
+
+/* EVENTOS */
 document.addEventListener('DOMContentLoaded', () => {
     cargarArtistas();
     

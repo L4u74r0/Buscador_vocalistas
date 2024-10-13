@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+/* OBTENER INFORMACIÓN DEL ARTISTA */
 async function obtenerInfoArtista(nombreArtista) {
     try {
         const url = `https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${encodeURIComponent(nombreArtista)}&api_key=76f33100dd7284b4c8435ff478a8d1b0&format=json`;
@@ -32,6 +33,7 @@ async function obtenerInfoArtista(nombreArtista) {
     }
 }
 
+/* OBTENER INFORMACIÓN LOCAL DEL ARTISTA */
 async function obtenerInfoLocal(nombreArtista) {
     try {
         const response = await fetch('vocalistas.json');
@@ -43,6 +45,7 @@ async function obtenerInfoLocal(nombreArtista) {
     }
 }
 
+/* MOSTRAR INFORMACIÓN DEL ARTISTA */
 function mostrarInfoArtista(artistaInfo, infoLocal) {
     const containerElement = document.querySelector('.container');
     containerElement.innerHTML = '';
@@ -56,10 +59,10 @@ function mostrarInfoArtista(artistaInfo, infoLocal) {
             <div class="artist-info-container">
                 <div class="artist-image-container">
                     <img src="${infoLocal.imagenUrl}" alt="${artistaInfo.name}" class="artist-image-bio">
-                    <h1>${artistaInfo.name}</h1>
                     <div class="artist-dates">
-                        <p>Nacimiento: ${fechaNacimiento}</p>
-                        <p>Fallecimiento: ${fechaFallecimiento}</p>
+                    <h1>${artistaInfo.name}</h1>
+                        <p>Nacimiento ${fechaNacimiento}</p>
+                        <p>Fallecimiento ${fechaFallecimiento}</p>
                     </div>
                 </div>
                 <div class="artist-bio">
