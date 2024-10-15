@@ -4,7 +4,7 @@ const WIKIPEDIA_API_URL = 'https://en.wikipedia.org/w/api.php';
 
 /* VARIABLES */
 let todosLosArtistas = [];
-const ARTISTAS_POR_PAGINA = 9;
+const ARTISTAS_POR_PAGINA = 12;
 let paginaActual = 1;
 
 let artistasFiltrados = [];
