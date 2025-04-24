@@ -84,24 +84,24 @@ async function mostrarInfoArtista(artistaInfo, infoLocal) {
         const fechaFallecimiento = infoLocal.fechaFallecimiento ? new Date(infoLocal.fechaFallecimiento).toLocaleDateString() : '-';
 
         containerElement.innerHTML = `
-            <div class="artist-info-container">
-                <div class="artist-image-container">
-                    <img src="${infoLocal.imagenUrl}" alt="${artistaInfo.name}" class="artist-image-bio">
-                    <div class="artist-dates">
-                        <h1>${artistaInfo.name}</h1>
-                        <p>Nacimiento: ${fechaNacimiento}</p>
-                        ${infoLocal.fechaFallecimiento ? `<p>Fallecimiento: ${fechaFallecimiento}</p>` : ''}
-                    </div>
-                </div>
-                <div class="artist-bio">
-                    <h2>Biografía</h2>
-                    <p>${artistaInfo.bio.content}</p>
-                    <p>Oyentes: ${artistaInfo.stats.listeners}</p>
-                    <p>Reproducciones: ${artistaInfo.stats.playcount}</p>
-                    ${videoUrl ? `<h3>Video Destacado</h3><iframe width="560" height="315" src="${videoUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>` : '<p>No se encontró un video destacado.</p>'}
-                </div>
+    <div class="artist-info-container">
+        <div class="artist-image-container">
+            <img src="${infoLocal.imagenUrl}" alt="${artistaInfo.name}" class="artist-image-bio">
+            <div class="artist-dates">
+                <h1>${artistaInfo.name}</h1>
+                <p>Nacimiento: ${fechaNacimiento}</p>
+                ${infoLocal.fechaFallecimiento ? `<p>Fallecimiento: ${fechaFallecimiento}</p>` : ''}
             </div>
-        `;
+        </div>
+        <div class="artist-bio">
+            <h2>Biografía</h2>
+            <p>${artistaInfo.bio.content}</p>
+            <p>Oyentes: ${artistaInfo.stats.listeners}</p>
+            <p>Reproducciones: ${artistaInfo.stats.playcount}</p>
+            ${videoUrl ? `<h3>Video Destacado</h3><div class="video-container"><iframe src="${videoUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>` : '<p>No se encontró un video destacado.</p>'}
+        </div>
+    </div>
+`;
     } else {
         console.log('No se encontró información local del artista');
         containerElement.innerHTML = `
