@@ -45,10 +45,38 @@ async function obtenerInfoLocal(nombreArtista) {
     }
 }
 
-/* MOSTRAR INFORMACIÓN DEL ARTISTA */
-function mostrarInfoArtista(artistaInfo, infoLocal) {
+/* BUSCAR VIDEO EN YOUTUBE */
+async function buscarVideoYouTube(nombreArtista) {
+    const API_KEY = 'AIzaSyDflkFPGtdaJKQmEbQm2TIOzOdA4sW14Ug'; // Reemplaza con tu clave de API
+    const query = `${nombreArtista} official music video`;
+    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(query)}&type=video&key=${API_KEY}`;
+
+    try {
+        const respuesta = await fetch(url);
+        const datos = await respuesta.json();
+
+        if (datos.items && datos.items.length > 0) {
+            const videoId = datos.items[0].id.videoId;
+            return `https://www.youtube.com/embed/${videoId}`;
+        } else {
+            console.error('No se encontraron videos para el artista:', nombreArtista);
+            return null;
+        }
+    } catch (error) {
+        console.error('Error al buscar el video en YouTube:', error);
+        return null;
+    }
+}
+
+/* MOSTRAR INFORMACIÓN DEL ARTISTA (MODIFICADO) */
+async function mostrarInfoArtista(artistaInfo, infoLocal) {
     const containerElement = document.querySelector('.container');
     containerElement.innerHTML = '';
+
+    let videoUrl = null;
+    if (infoLocal) {
+        videoUrl = await buscarVideoYouTube(artistaInfo.name);
+    }
 
     if (infoLocal) {
         console.log('Información local del artista encontrada:', infoLocal);
@@ -60,9 +88,9 @@ function mostrarInfoArtista(artistaInfo, infoLocal) {
                 <div class="artist-image-container">
                     <img src="${infoLocal.imagenUrl}" alt="${artistaInfo.name}" class="artist-image-bio">
                     <div class="artist-dates">
-                    <h1>${artistaInfo.name}</h1>
-                        <p>Nacimiento ${fechaNacimiento}</p>
-                        <p>Fallecimiento ${fechaFallecimiento}</p>
+                        <h1>${artistaInfo.name}</h1>
+                        <p>Nacimiento: ${fechaNacimiento}</p>
+                        <p>Fallecimiento: ${fechaFallecimiento}</p>
                     </div>
                 </div>
                 <div class="artist-bio">
@@ -70,6 +98,7 @@ function mostrarInfoArtista(artistaInfo, infoLocal) {
                     <p>${artistaInfo.bio.content}</p>
                     <p>Oyentes: ${artistaInfo.stats.listeners}</p>
                     <p>Reproducciones: ${artistaInfo.stats.playcount}</p>
+                    ${videoUrl ? `<h3>Video Destacado</h3><iframe width="560" height="315" src="${videoUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>` : '<p>No se encontró un video destacado.</p>'}
                 </div>
             </div>
         `;
