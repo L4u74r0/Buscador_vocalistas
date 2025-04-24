@@ -2,6 +2,7 @@
   "vocalistas": [
     {
       "nombre": "Kurt Cobain",
+      "banda": "Nirvana",
       "imagenUrl": "https://www.laizquierdadiario.com/IMG/arton67387.jpg?1487758784",
       "fechaNacimiento": "1967-02-20",
       "fechaFallecimiento": "1994-04-05",
@@ -9,6 +10,7 @@
     },
     {
       "nombre": "Eddie Vedder",
+      "banda": "Pearl Jam",
       "imagenUrl": "https://www.billboard.com/wp-content/uploads/media/eddie-vedder-pearl-jam-1992-nyc-performance-billboard-650.jpg?w=650",
       "fechaNacimiento": "1964-12-23",
       "fechaFallecimiento": null,
@@ -16,6 +18,7 @@
     },
     {
       "nombre": "Chris Cornell",
+      "banda": "Audioslave, Soundgarden",
       "imagenUrl": "https://i0.wp.com/www.culturesonar.com/wp-content/uploads/2017/06/chris-cornell-getty.jpg?fit=960%2C540&ssl=1",
       "fechaNacimiento": "1964-07-20",
       "fechaFallecimiento": "2017-05-18",
@@ -23,6 +26,7 @@
     },
     {
       "nombre": "Layne Staley",
+      "banda": "Alice in Chains",
       "imagenUrl": "https://images.squarespace-cdn.com/content/v1/56858337cbced60d3b293aef/1503370386881-0VR5XWD83SAE2EAO4AEE/Albumism_LayneStaley_August_22_1967.jpg",
       "fechaNacimiento": "1967-08-22",
       "fechaFallecimiento": "2002-04-05",
@@ -30,6 +34,7 @@
     },
     {
       "nombre": "Scott Weiland",
+      "banda": "Stone Temple Pilots",
       "imagenUrl": "https://media.vanityfair.com/photos/56621a8aff2f5268396f05ee/master/w_2560%2Cc_limit/scott-weiland-remembered-musician-dead.jpg",
       "fechaNacimiento": "1967-10-27",
       "fechaFallecimiento": "2015-12-03",
@@ -51,6 +56,7 @@
     },
     {
       "nombre": "Dave Grohl",
+      "banda": "Foo Fighters",
       "imagenUrl": "https://www.guitarlobby.com/wp-content/uploads/2021/03/Dave-Grohl-Guitars-and-Gear-Featured-Image.jpg",
       "fechaNacimiento": "1969-01-14",
       "fechaFallecimiento": null,
@@ -58,6 +64,7 @@
     },
     {
       "nombre": "Anthony Kiedis",
+      "banda": "Red Hot Chili Peppers",
       "imagenUrl": "https://elcomercio.pe/resizer/v2/VWL7JJCMHVELFDJC7Q3JQJLFY4.jpg?auth=c13f9d7cf5110e85a72a81306bb9540b93582c821d67145c297bf47a95ea89f3&width=1200&height=680&quality=75&smart=true",
       "fechaNacimiento": "1962-11-01",
       "fechaFallecimiento": null,
@@ -65,6 +72,7 @@
     },
     {
       "nombre": "Zack de la Rocha",
+      "banda": "Rage Against the Machine",
       "imagenUrl": "https://64.media.tumblr.com/ec74fd2120bd9c3f75c9bf639b92e22c/c18a5f7423042bcd-be/s1280x1920/1ea476f3a96528350312e7f1f36255cd52858a31.jpg",
       "fechaNacimiento": "1970-01-12",
       "fechaFallecimiento": null,
@@ -72,6 +80,7 @@
     },
     {
       "nombre": "Phil Anselmo",
+      "banda": "Pantera",
       "imagenUrl": "https://upload.wikimedia.org/wikipedia/it/5/5b/Walk_%28Pantera%29.png",
       "fechaNacimiento": "1968-06-30",
       "fechaFallecimiento": null,
@@ -155,7 +164,8 @@
       "genero": "Post-Grunge, Alternative Rock"
     },
     {
-      "nombre": "Serj Tankian",
+      "nombre": "Serj Tankian", 
+      "banda": "System of a Down",
       "imagenUrl": "https://www.nme.com/wp-content/uploads/2018/08/rexfeatures_5225224b.jpg",
       "fechaNacimiento": "1967-08-21",
       "fechaFallecimiento": null,
@@ -163,6 +173,7 @@
     },
     {
       "nombre": "Chester Bennington",
+      "banda": "Linkin Park",
       "imagenUrl": "https://www.billboard.com/wp-content/uploads/media/chester-bennington-linkin-park-live-2001-a-billboard-1548.jpg",
       "fechaNacimiento": "1976-03-20",
       "fechaFallecimiento": "2017-07-20",
@@ -170,6 +181,7 @@
     },
     {
       "nombre": "Amy Lee",
+      "banda": "Evanescence",
       "imagenUrl": "https://www.revolvermag.com/wp-content/uploads/2022/03/08/evanescence_getty_2006_.jpg",
       "fechaNacimiento": "1981-12-13",
       "fechaFallecimiento": null,
@@ -184,6 +196,7 @@
     },
     {
       "nombre": "Hayley Williams",
+      "banda": "Paramore",
       "imagenUrl": "https://facts.net/wp-content/uploads/2023/07/38-facts-about-hayley-williams-1690777587.jpg",
       "fechaNacimiento": "1988-12-27",
       "fechaFallecimiento": null,
@@ -191,6 +204,7 @@
     },
     {
       "nombre": "Brandon Flowers",
+      "banda": "The Killers",
       "imagenUrl": "https://i0.wp.com/www.conciertosencore.com.mx/wp-content/uploads/2020/06/PORTADAweb-brandonflowers.jpg?fit=1920%2C909&ssl=1",
       "fechaNacimiento": "1981-06-21",
       "fechaFallecimiento": null,
@@ -198,6 +212,7 @@
     },
     {
       "nombre": "Julian Casablancas",
+      "banda": "The Strokes",
       "imagenUrl": "https://images.squarespace-cdn.com/content/v1/5a0dd6831f318dcf5130a0d5/1604423049952-F707WCPS23ICMW6LDYLI/juliancasablancas-e1545854667237.jpg",
       "fechaNacimiento": "1978-08-23",
       "fechaFallecimiento": null,
@@ -205,6 +220,7 @@
     },
     {
       "nombre": "Jack White",
+      "banda": "The White Stripes",
       "imagenUrl": "https://i.pinimg.com/736x/43/5c/c9/435cc9f0dc7bc8883fc0ec40649fdc9c.jpg",
       "fechaNacimiento": "1975-07-09",
       "fechaFallecimiento": null,
@@ -212,6 +228,7 @@
     },
     {
       "nombre": "Corey Taylor",
+      "banda": "Slipknot",
       "imagenUrl": "https://fmrockandpop.com/media/k2/items/cache/f9e4fdfb29e155686bf7df5fcac1b78f_L.webp",
       "fechaNacimiento": "1973-12-08",
       "fechaFallecimiento": null,
@@ -219,6 +236,7 @@
     },
     {
       "nombre": "Matt Bellamy",
+      "banda": "Muse",
       "imagenUrl": "https://pedalesdeguitarra.com/wp-content/uploads/2013/05/matt-bellamy-muse.jpg",
       "fechaNacimiento": "1978-06-09",
       "fechaFallecimiento": null,
@@ -226,6 +244,7 @@
     },
     {
       "nombre": "Billie Joe Armstrong",
+      "banda": "Green Day",
       "imagenUrl": "https://guitar.com/wp-content/uploads/2024/03/Billie-Joe-Armstrong-Blue-2009-credit-Michael-Hurcomb-Corbis-Getty@2000x1500.jpg",
       "fechaNacimiento": "1972-02-17",
       "fechaFallecimiento": null,
@@ -303,6 +322,7 @@
     },
     {
       "nombre": "Tyler Joseph",
+      "banda": "Twenty One Pilots",
       "imagenUrl": "https://pm1.aminoapps.com/6486/99485f6759a815f3ff740278cedbd81979eb22ef_00.jpg",
       "fechaNacimiento": "1988-12-01",
       "fechaFallecimiento": null,
@@ -338,6 +358,7 @@
     },
     {
       "nombre": "Jonathan Davis",
+      "banda": "Korn",
       "imagenUrl": "https://monterreyrock.com/wp-content/uploads/2018/02/jorn-jonathan-davis.jpg",
       "fechaNacimiento": "1971-01-18",
       "fechaFallecimiento": null,

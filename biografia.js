@@ -46,10 +46,10 @@ async function obtenerInfoLocal(nombreArtista) {
 }
 
 /* BUSCAR VIDEO EN YOUTUBE */
-async function buscarVideoYouTube(nombreArtista) {
+async function buscarVideoYouTube(nombreArtista, banda) {
     const API_KEY = 'AIzaSyDflkFPGtdaJKQmEbQm2TIOzOdA4sW14Ug'; // Reemplaza con tu clave de API
-    const query = `${nombreArtista} official music video`;
-    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(query)}&type=video&key=${API_KEY}`;
+    const query = banda ? `${banda} official music video` : `${nombreArtista} official music video`;
+    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(query)}&type=video&videoEmbeddable=true&key=${API_KEY}`;
 
     try {
         const respuesta = await fetch(url);
@@ -59,7 +59,7 @@ async function buscarVideoYouTube(nombreArtista) {
             const videoId = datos.items[0].id.videoId;
             return `https://www.youtube.com/embed/${videoId}`;
         } else {
-            console.error('No se encontraron videos para el artista:', nombreArtista);
+            console.error('No se encontraron videos incrustables para la búsqueda:', query);
             return null;
         }
     } catch (error) {
@@ -75,13 +75,13 @@ async function mostrarInfoArtista(artistaInfo, infoLocal) {
 
     let videoUrl = null;
     if (infoLocal) {
-        videoUrl = await buscarVideoYouTube(artistaInfo.name);
+        videoUrl = await buscarVideoYouTube(artistaInfo.name, infoLocal.banda);
     }
 
     if (infoLocal) {
         console.log('Información local del artista encontrada:', infoLocal);
         const fechaNacimiento = infoLocal.fechaNacimiento ? new Date(infoLocal.fechaNacimiento).toLocaleDateString() : 'Desconocida';
-        const fechaFallecimiento = infoLocal.fechaFallecimiento ? new Date(infoLocal.fechaFallecimiento).toLocaleDateString() : 'Vivo';
+        const fechaFallecimiento = infoLocal.fechaFallecimiento ? new Date(infoLocal.fechaFallecimiento).toLocaleDateString() : '-';
 
         containerElement.innerHTML = `
             <div class="artist-info-container">
@@ -90,7 +90,7 @@ async function mostrarInfoArtista(artistaInfo, infoLocal) {
                     <div class="artist-dates">
                         <h1>${artistaInfo.name}</h1>
                         <p>Nacimiento: ${fechaNacimiento}</p>
-                        <p>Fallecimiento: ${fechaFallecimiento}</p>
+                        ${infoLocal.fechaFallecimiento ? `<p>Fallecimiento: ${fechaFallecimiento}</p>` : ''}
                     </div>
                 </div>
                 <div class="artist-bio">
