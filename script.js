@@ -45,7 +45,7 @@ function mostrarArtistas() {
         tarjeta.className = 'artist-card';
         
         const fechaNacimiento = artista.fechaNacimiento ? new Date(artista.fechaNacimiento).toLocaleDateString() : 'Desconocida';
-        const fechaFallecimiento = artista.fechaFallecimiento ? new Date(artista.fechaFallecimiento).toLocaleDateString() : 'Vivo';
+        const fechaFallecimiento = artista.fechaFallecimiento ? new Date(artista.fechaFallecimiento).toLocaleDateString() : '---';
         
         tarjeta.innerHTML = `
             <img src="${artista.imagenUrl}" alt="${artista.nombre}" class="artist-image" loading="lazy">
